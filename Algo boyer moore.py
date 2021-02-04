@@ -43,3 +43,5 @@ def boyer_moore (texte, cle):
 if __name__=='__main__':
     print(table_sauts('TARTEMPION'))
     print(boyer_moore('bonjour Mr tartempion, comment va mr tartempion ?','tartempion'))
+
+Amour = []
