@@ -6,7 +6,7 @@ import urllib.request
 
 sauce1 = urllib.request.urlopen("https://www.paroles.net/lino/paroles-des-revees-et-des-cendres")
 soup1 = bs.BeautifulSoup(sauce1,'html5lib')
-fichier = open('texte-lino.txt','w')
+fichier = open('texte.txt','w')
 tmp = soup1.find('div',"song-text").text #on cherche tous le texte qui se situe dans les balises div de class 'song-texte'
 fichier.write(tmp)
 fichier.close()

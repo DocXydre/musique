@@ -44,4 +44,19 @@ if __name__=='__main__':
     print(table_sauts('TARTEMPION'))
     print(boyer_moore('bonjour Mr tartempion, comment va mr tartempion ?','tartempion'))
 
-Amour = []
+Amour = ["amour","aime","baise","cœur","amoureux","tendresse","amitié","baiser","Cupidon","Aphrodite","passion","Éros","désir","sentiment","amant","affection","idylle","Vénus","attachement","attirance","platonique","compassion","plaisir","charité","érotique","haine","relation","beauté","adoration","aimer","philtre","altruisme","amourette","bien-aimé","érotisme","joie","mariage","romantique","courtois","émotion","déesse","éternel","luxure","bonheur","conjugal","jalousie","psyché","filial","fraternel","charnel","chaste","sexualité","dévotion","ivresse","philanthropie","couple","fidélité","tendre","sincère","volupté","Dieu","idolâtrie","piété","souffrance","troubadour","chant","chasteté","désespoir","libertinage","romantisme","solitude","désamour","poésie","sacrifice","poème","sensualité","sexuel","chagrin","romance","hymen","séduction","âme","dilection","lyrique","ode","thème","abnégation","bagatelle","bien-aimée","chanson","conquête","déclaration","désintéressement","fou","indifférence","passionné","adultère","amor","enchantement","femme","inceste"]
+#Argent = monnaie,métal,somme,banque,sou,thune,bourse,caisse,denier,argenterie,trésor,dépense,blé,fric,lingot,magot,dépenser,fonds,finance,flouze,oseille,crédit,rembourser,loterie,billet,pèze,amasser,créancier,maille,achat,avarice,écu,médaille,sac,jeu,payer,prêter,dette,pognon,richesse,blanchiment,débourser,piastre,prostitution,rançon,rond,bijou,économiser,casino,dollar,papier-monnaie,prêt,argent liquide,coffre,gagner,précieux,vendu,,prix,fortune,argent comptant,détournement,financier,métal précieux,bancaire,vendre,versement,impôt,remboursement,pépètes,poche,recette,salaire,volé,commerce,espèce,fasce,masse,paie,pénurie,prêteur,rémunération,thésaurisation,argent de poche,arrhes,braise,caillasse,douille,galette,liquide,patate,peso,radis,thésauriser,comptant,désargenter,devoir,diamant,gisement,gousset,impécuniosité,loyer,mercenaire,roupie,simonie,contrôle,fauché,lamé,métallique,paiement,plaqué,rapporter,sesterce,vénal,argent sale,chèque,empocher,endetté,escroquer,inflation,métal blanc,minerai,radin,soutirer,sulfure,trésorerie,butin,économe,économie,financer,millionnaires,orfèvrerie,papier,PayPal,pièce,acheter,centime,virement,investissement,pièce,racket,transaction,banque,braquage,budget,échange,encaisser,produit,dépensier,verser,cagnotte,dévaliser,marchand,coûtait,milliardaire,montant,payement,tune,affaires
+Amour2 = ["amour"]
+
+def boyer_moore2(texte, cle):
+    texte = texte.upper()
+    cle = cle.upper()
+    long_txt = len(texte)
+    long_cle = len(cle)
+    print(texte)
+
+def majuscule(liste):
+    for i in range(len(list-1)):
+        liste[i] = liste[i].upper()
+        return liste
+print(majuscule(Amour2))
