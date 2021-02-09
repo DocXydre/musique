@@ -60,3 +60,10 @@ def majuscule(liste):
         liste[i] = liste[i].upper()
         return liste
 print(majuscule(Amour2))
+
+def lien (artiste, nom):
+    nom = nom.strip()
+    nom = nom.lower()
+    nom = nom.replace(" ","-")
+    url= 'https://www.paroles.net/'+artiste+'/paroles-'+nom
+    return url
