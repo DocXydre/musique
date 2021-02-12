@@ -8,7 +8,7 @@ Fenetre=Tk()
 Fenetre.title("Saucisse")
 Fenetre.geometry('1920x1080')
 
-fond = PhotoImage(file='sky.gif')
+fond = PhotoImage(file='menu.gif')
 
 
 
@@ -19,8 +19,7 @@ def traiter():
     mes1=ISBN.get()
     print(mes1)
 
-titre=Label(Fenetre,text="Bienvenue sur Saucisse musicale !", width=30,font='Impact 13')
-titre.place(x=200,y=100)
+
 blaze= tk.Entry(Fenetre, textvariable="vald", width=30,font='Impact 13')
 blaze.place(x=220,y=250)
 nom= tk.Entry(Fenetre, textvariable="lezarman", width=30,font='Impact 13')
