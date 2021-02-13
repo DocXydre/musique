@@ -14,8 +14,34 @@ Amour = ["amour","aime","baise","cœur","amoureux","tendresse","amitié","baiser
 Argent = ["monnaie","métal","somme","banque","sou","thune","bourse","caisse","denier","argenterie","trésor","dépense","blé","fric","lingot","magot","dépenser","fonds","finance","flouze","oseille","crédit","rembourser","loterie","billet","pèze","amasser","créancier","maille","achat","avarice","écu","médaille","sac","jeu","payer","prêter","dette","pognon","richesse","blanchiment","débourser","prostitution","pute","rançon","rond","bijou","économiser","casino","dollar","papier","prêt","coffre","gucci","louis vuitton","gagner","précieux","dior","vendu","prix","fortune","précieux","bancaire","vendre","versement","impôt","poche","recette","salaire","volé","commerce","espèce","liquide","comptant","désargenter","diamant","gisement","loyer","mercenaire","contrôle","métallique","paiement","plaqué","rapporter","sesterce","vénal","argent","sale","chèque","empocher","endetté","escroquer","inflation","métal","blanc","minerai","radin","soutirer","sulfure","trésorerie","butin","économe","économie","financer","millionnaires","orfèvrerie","papier","PayPal","pièce","acheter","centime","virement","investissement","pièce","racket","transaction","banque","braquage","budget","échange","encaisser","produit","dépensier","verser","cagnotte","dévaliser","marchand","coûtait","milliardaire","montant","payement","tune","affaires"]
 Drogue=['gue-dro','opium','cannabis','héroïne','trafic','céllophanée','cocaïne','trafiquant','alcool','stupéfiant','dope','médicament','toxicomanie','addiction','dépendance','psychotrope','dealer','dose','ecstasy','came','LSD','amphétamine','conso','crack','deal','fumette','substance','addictif','sniffer','toxicomane','narcotique','overdose','haschich','désintoxication','rave','tabac','cartel','intraveineuse','surdose','défonce','emprise','psychédélique','shooté','alcaloïde','gang','médicinal','narcoterroriste','marijuana','shit','accoutumance','bicrave','caïd','consommé','illicite','légalisation','manque','mélange','seringue','sexe','trafic de drogue','dopage','hallucinogène','morphine','poison','sevrage','procurer','toxico','compulsif','kétamine','méthamphétamine','narcotrafic','toxique','consommateur','criminalité','délinquance','effet','pharmacie','racket','réseau','vape','coke','Colombie','revendeur','alcoolisme','hallucination','injection','narcotrafiquant','orviétan','antidrogue','arsenic','bad trip','bicraveur','camelote','chlague','chnek','chnouf','choper','contrebande','daube','déchiré','dépouillé','désomorphine','droguier','droguiste','faya','fechnou','fly','foncedé','guedro','illégal','junkie','junky','leurdi','mafia','merde','meuca','meumeu','mixture','narco-État','palliatif','pécho','pété','pharmacologie','police','potion','pouilledé','psychoactif','purge','schnouf','schnouff','se camer','se shooter','séquelle','shoot','stone','stup','Tox','célophané','toxine','trip','triper','tripper','usager','venin','virus']
 
+def lien (artiste, nom):
+    artiste = artiste.lower()
+    artiste = artiste.strip()
+    artiste = artiste.replace(" ","-")
+    artiste = artiste.replace("è","e")
+    artiste =  artiste.replace("ï","i")
+    artiste = artiste.replace("é","é")
+    artiste = artiste.replace("à","a")
+    artiste = artiste.replace("ê","e")
+    artiste = artiste.replace("î","i")
+    artiste = artiste.replace("ê","e")
+    nom = nom.lower()
+    nom = nom.strip()
+    nom = nom.replace(" ","-")
+    nom = nom.replace("è","e")
+    nom = nom.replace("ï","i")
+    nom = nom.replace("é","é")
+    nom = nom.replace("à","a")
+    nom = nom.replace("ê","e")
+    nom = nom.replace("î","i")
+    nom = nom.replace("ê","e")
+    url= 'https://www.paroles.net/'+artiste+'/paroles-'+nom
+    return url
+
 def traiter():
-    URL_parolesnet=URL_entry.get()
+    artiste_URL_parolesnet=URL_entry1.get()
+    nom_URL_parolesnet=URL_entry2.get()
+    URL_parolesnet = lien(artiste_URL_parolesnet,nom_URL_parolesnet)
     print(URL_parolesnet)
     sauce1 = urllib.request.urlopen(URL_parolesnet)
     soup1 = bs.BeautifulSoup(sauce1,'html5lib')
@@ -39,9 +65,9 @@ def traiter():
     for i in range(len(Drogue)):
         compteur3 = boyer_moore(chanson,Drogue[i])
         nb_drogue = nb_drogue + compteur3
-    print(nb_amour)
-    print(nb_argent)
-    print(nb_drogue)
+    print(nb_amour," mots du champ lexical de l'amour")
+    print(nb_argent," mots du champ lexical de l'argent")
+    print(nb_drogue," mots du champ lexical de la drogue")
     if max(nb_amour,nb_argent,nb_drogue) == nb_amour:
         print("C'est une chanson d'amour")
 
@@ -93,8 +119,10 @@ def boyer_moore (texte, cle):
             trouve = False #on remet trouvé à False car on cherche la prochaine occurence
     return len(positions)
 
-URL_entry = tk.Entry(Fenetre, textvariable="caca", width=30,font='Impact 13')
-URL_entry.place(x=220,y=250)
+URL_entry1 = tk.Entry(Fenetre, textvariable="oui", width=30,font='Impact 13')
+URL_entry1.place(x=220,y=250)
+URL_entry2 = tk.Entry(Fenetre, textvariable="non", width=30,font='Impact 13')
+URL_entry2.place(x=220,y=300)
 Bouttonsuivant = Button(Fenetre,text="Suite",height=1,command=traiter,font='Impact 12',fg='white',bg='red',cursor='hand2')#boutton pour passer à la page suivante
 Bouttonsuivant.place(x=275,y=460)
 
