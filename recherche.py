@@ -20,7 +20,7 @@ def traiter():
     mes1=ISBN.get()
     print(mes1)
 
-intro.play
+intro.play()
 blaze= tk.Entry(Fenetre, textvariable="vald", width=30,font='Impact 13')
 blaze.place(x=220,y=250)
 nom= tk.Entry(Fenetre, textvariable="lezarman", width=30,font='Impact 13')
