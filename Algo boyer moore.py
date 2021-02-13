@@ -4,6 +4,7 @@ import tkinter as tk
 import os
 import bs4 as bs
 import urllib.request
+import pickle
 
 
 Fenetre=Tk()
@@ -125,7 +126,7 @@ URL_entry2 = tk.Entry(Fenetre, textvariable="non", width=30,font='Impact 13')
 URL_entry2.place(x=220,y=300)
 Bouttonsuivant = Button(Fenetre,text="Suite",height=1,command=traiter,font='Impact 12',fg='white',bg='red',cursor='hand2')#boutton pour passer à la page suivante
 Bouttonsuivant.place(x=275,y=460)
-
+#Je temmerde thomas 
 
 
 Fenetre.mainloop()
