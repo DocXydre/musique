@@ -1,6 +1,7 @@
 def lien (artiste, nom):
-    nom.strip()
-    nom.replace(" ","-")
+    nom = nom.lower()
+    nom = nom.strip()
+    nom = nom.replace(" ","-")
     url= 'https://www.paroles.net/'+artiste+'/paroles-'+nom
     return url
 
